@@ -1,0 +1,118 @@
+#Project structure
+📁 security-analyst-internship
+ ┣ 📂 Task-1-Nmap-Scan
+ ┃ ┣ 📂 screenshots
+ ┃ ┃ ┣ basic_scan.png
+ ┃ ┃ ┣ service_scan.png
+ ┃ ┃ ┗ os_scan.png
+ ┃ ┣ nmap_scan_results.txt
+ ┃ ┗ task.md
+ ┗ README.md
+#RWADME.md #Main file
+# 🔐 Security Analyst Internship Project
+
+## 👩‍💻 About Me
+I am currently doing a Security Analyst Internship and learning cybersecurity tools.
+
+## 📌 Task 1: Basic Network Scanning with Nmap
+
+## 🛠️ Tools Used
+- Nmap
+- Kali Linux / Windows Terminal
+
+## ❓ What is Nmap?
+Nmap (Network Mapper) is a tool used to scan networks and find open ports and services.
+
+## 🔍 Why Network Scanning Matters?
+- Helps identify open ports
+- Detects running services
+- Finds possible security risks
+
+## ⚖️ Ethical Guidelines
+- Only scan your own system or authorized networks
+- Do not scan unknown targets
+
+## 📂 Project Structure
+- Task-1-Nmap-Scan/
+#Task.md
+# 🔐 Task 1: Basic Network Scanning with Nmap
+
+## 🎯 Objective
+To perform network scanning and identify open ports, services, and OS.
+
+## 🛠️ Tools Used
+- Nmap
+- Terminal
+
+## 🔍 Step 1: Basic Scan
+
+Command:
+nmap 127.0.0.1
+
+### Output:
+- Port 135 → Open
+- Port 445 → Open
+
+📸 Screenshot:
+![Basic Scan](screenshots/basic_scan.png)
+
+## 🔍 Step 2: Service Version Scan
+
+Command:
+nmap -sV 127.0.0.1
+
+### Output:
+- Port 135 → MSRPC
+- Port 445 → Microsoft-DS
+
+📸 Screenshot:
+![Service Scan](screenshots/service_scan.png)
+
+## 🔍 Step 3: OS Detection
+
+Command:
+nmap -O 127.0.0.1
+
+### Output:
+- OS detected: Windows
+
+📸 Screenshot:
+![OS Scan](screenshots/os_scan.png)
+
+## 📊 Findings
+
+| Port | Service | Description |
+|------|--------|------------|
+| 135  | MSRPC  | Remote procedure calls |
+| 445  | SMB    | File sharing service |
+
+## ⚠️ Security Analysis
+
+- Port 445 open → SMB attacks ka risk hota hai  
+- Port 135 → Remote access vulnerability ho sakti hai  
+
+## 📚 Learning
+
+- Nmap commands ka use  
+- Open ports identify karna  
+- Security risks samajhna
+# nmap_scan_results.txt
+Nmap Scan Results
+
+Target IP: 127.0.0.1
+
+Scan Type:
+1. Basic Scan
+2. Service Version Scan
+3. OS Detection
+
+Open Ports:
+135 - MSRPC
+445 - SMB
+
+Analysis:
+- The SMB service may be vulnerable to potential attacks
+-Open remote services increase the overall attack surface of the system
+Conclusion:
+-The system is running multiple services that could pose security risks if not properly secured. It is recommended to review and harden these services to reduce potential vulnerabilities.
+
