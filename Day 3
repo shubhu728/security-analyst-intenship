@@ -1,0 +1,13 @@
+Task-3-SQL-Injection-DVWA/
+│
+├── README.md
+├── sql_injection_notes.md
+├── screenshots/
+│   ├── 01-dvwa-home.png
+│   ├── 02-security-low.png
+│   ├── 03-sqli-page.png
+│   ├── 04-payload1-result.png
+│   ├── 05-payload2-result.png
+│   └── 06-analysis.png
+└── setup/
+    └── xampp-setup.md
